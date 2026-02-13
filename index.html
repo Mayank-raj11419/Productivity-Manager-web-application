@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Manager web application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="hamburger">
+        ☰
+    </div>
+
+
+    <section id="nav-sec">
+        <img src="#" alt="U">
+        <span>Username</span>
+
+        <ul id="nav-ul-1">
+            <li>
+                <label>
+                    <input type="radio" name="nav-check">
+                    Home
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="nav-check">
+                    Upcoming Tasks
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="nav-check">
+                    Today Tasks
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="nav-check">
+                    Pending Tasks
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="Add-nav" type="radio" name="nav-check">
+                    Add Task
+                </label>
+            </li>
+        </ul>
+
+        <ul id="nav-ul-2">
+            <li>
+                <label>
+                    <input type="radio" name="nav-check">
+                    Setting
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="nav-check">
+                    Contact
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="nav-check">
+                    About
+                </label>
+            </li>
+        </ul>
+
+
+    </section>
+
+    <div>
+
+        <section id="add-task">
+            <form id="Add-task">
+
+
+
+                <label>Task discription</label>
+                <input type="text" placeholder="Enter the task" id="task">
+
+
+                <div>
+                    <span>start date</span>
+                    <input type="date" name="" id="date">
+                </div>
+
+
+                <div>
+                    <span>Urgency</span>
+
+                    <select id="urg-op">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+
+                <div>
+                    <span>Importance</span>
+
+                    <select id="imp-op">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <input type="submit" name="" id="submit">
+
+            </form>
+
+        </section>
+
+
+        <section id="home-sec">
+
+            <div class="home-heading">
+                <div class="home-heading-1st">
+                    <span class="home-heading-1st-1st">Dashboard</span>
+                    <span class="home-heading-1st-2nd">Plan,Prioritize and accomplish Your tasks.</span>
+                </div>
+
+                <div>
+                    <span class="home-heading-1st-3rd">+<span>task</span></span>
+                </div>
+
+
+            </div>
+            <div class="home-dash-sec">
+
+                <div class="Total-task task-data flex-c jsc-sa">
+                    <span>Total task</span>
+
+                    <span></span>
+                </div>
+
+                <div class="Ended-task task-data flex-c jsc-sa">
+                    <span>Ended task</span>
+
+                    <span></span>
+                </div>
+
+                <div class="Running-task task-data flex-c jsc-sa">
+                    <span>Running task</span>
+
+                    <span></span>
+                </div>
+
+                <div class="pending-task task-data flex-c jsc-sa">
+                    <span>pending task</span>
+
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <div class="home-dash-sec2">
+                <div class="home-dash-sec-1">
+
+                    <div class="task-data2 AUT">
+                        <span>analytics</span>
+                        <div class="semi-progress">
+                            <div class="semi-circle">
+                                <div class="semi-inner">
+                                    <span id="analytics-percent">0%</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="task-data2 AUT">
+                        <span>Urgent task</span>
+                        <ul id="urgent-list" class="mini-task-list"></ul>
+
+
+                    </div>
+
+                    <div class="task-data2 AUT progress">
+                        <span>Task progress</span>
+                        <div class="progress-wrapper">
+                            <span id="today-progress-percent">0%</span>
+                            <div class="progress-bar">
+                                <div id="today-progress-fill"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="home-dash-sec-2">
+
+                    <div class="task-data2 Priority">
+                        <span class="pri_cls">Priority task</span>
+
+                        <div>
+                            <ul id="priority-list" class="mini-task-list"></ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="setting-sec">
+            Not available.
+        </section>
+
+        <section id="about-sec">
+            Not available.
+        </section>
+
+        <div id="context-menu">
+            <button onclick="editTask()">Edit (Date/Urgency/Imp)</button>
+            <button onclick="deleteTask()">Delete</button>
+            <button onclick="toggleComplete()">Mark Complete/Incomplete</button>
+
+        </div>
+
+        <section id="edit-task-sec">
+            <form id="Edit-task-form">
+                <h2>Editing: <span id="edit-task-title"></span></h2>
+
+                <div>
+                    <span>Start Date</span>
+                    <input type="date" id="edit-date">
+                </div>
+
+                <div>
+                    <span>Urgency</span>
+                    <select id="edit-urg">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div>
+                    <span>Importance</span>
+                    <select id="edit-imp">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="edit-buttons">
+                    <button type="submit" id="save-edit">Save</button>
+                    <button type="button" id="cancel-edit">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+
+        <section id="upcoming-tasks-sec" class="flex-d-c tasks-menu">
+            <h2>Upcoming</h2>
+            <ul class="task-list" id="upcomingList"></ul>
+        </section>
+
+        <section id="today-tasks-sec" class="flex-d-c tasks-menu">
+            <h2>Today</h2>
+            <ul class="task-list" id="TodayList"></ul>
+        </section>
+
+        <section id="pending-tasks-sec" class="flex-d-c tasks-menu">
+
+            <h2>Pending</h2>
+            <ul class="task-list" id="pendingList"></ul>
+
+        </section>
+
+
+        <section id="contact-sec">
+
+            <span>Email:- mayankraj11419@gmail.com</span>
+
+
+        </section>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script src="app.js"></script>
+
+</html>
