@@ -1,71 +1,66 @@
-Productivity Manager Web Application
+# 🚀 Productivity Manager
 
-A fully functional Task Management Web App built using HTML, CSS, and Vanilla JavaScript.
-This application helps users manage daily tasks efficiently with priority tracking, categories, and interactive task controls.
+A clean and interactive **Task Management Web Application** built using **HTML, CSS, and Vanilla JavaScript**.
 
-🚀 Live Features
+This project helps users organize daily tasks efficiently with categories, priority levels, date tracking, and dynamic task filtering — all without using any external frameworks.
 
-✅ Add New Tasks
+---
 
-✏ Edit Existing Tasks
+## ✨ Features
 
-🗑 Delete Tasks
+- ✅ Add, Edit, and Delete Tasks  
+- 📂 Task Categories — Study | Work | Personal  
+- 🔥 Priority Levels — Low | Medium | High  
+- 📅 Start Date & Due Date Support  
+- 📌 Automatic Task Filtering:
+  - Today Tasks
+  - Upcoming Tasks
+  - Pending Tasks  
+- 🖱 Right-Click Context Menu (Edit, Delete, About Task)  
+- ⚠ Form Validation with Error Handling  
+- 💾 LocalStorage Support (Data persists after refresh)
 
-📂 Category Selection (Study, Work, Personal)
+---
 
-🔥 Priority Levels (Low, Medium, High)
+## 🛠 Tech Stack
 
-📅 Start Date & Due Date Support
+- **HTML5** – Structure  
+- **CSS3** – Styling & Layout  
+- **JavaScript (ES6)** – Logic & Functionality  
+- **LocalStorage API** – Data Persistence  
 
-📊 Dashboard Overview
+---
 
-📌 Upcoming, Today & Pending Task Sections
+## 🎯 Project Goal
 
-🖱 Right-Click Context Menu (Edit, Delete, About Task)
+This project was created to strengthen core frontend development skills, including:
 
-⚠ Proper Error Handling (Description & Start Date validation)
+- DOM Manipulation  
+- Event Handling  
+- Form Validation  
+- Dynamic UI Rendering  
+- State Management  
+- Clean JavaScript Architecture  
 
-💾 Local Storage Support (Data persists after refresh)
+The application is built entirely using **Vanilla JavaScript** to demonstrate strong fundamentals without relying on frameworks.
 
-🛠 Tech Stack
+---
 
-HTML5 – Structure
+## 🔮 Future Improvements
 
-CSS3 – Styling & Layout
+- 🌙 Dark / Light Mode  
+- 📊 Task Completion Analytics  
+- 🧲 Drag & Drop Sorting  
+- 🔐 Authentication System  
+- 🌐 Backend Integration  
 
-JavaScript (Vanilla JS) – Functionality & Logic
+---
 
-LocalStorage API – Data Persistence
+## 👨‍💻 Author
 
-🎯 Project Purpose
+**Mayank Raj**  
+Engineering Student | Frontend Developer  
 
-This project was built to strengthen frontend development skills, including:
+---
 
-DOM Manipulation
-
-Event Handling
-
-Form Validation
-
-Dynamic UI Rendering
-
-State Management
-
-Working with Local Storage
-
-📈 Future Improvements
-
-🌙 Dark / Light Mode
-
-📊 Task Completion Analytics
-
-🧲 Drag & Drop Tasks
-
-🔐 Authentication System
-
-🌐 Backend Integration
-
-👨‍💻 Author
-
-Mayank Raj
-Frontend Developer | Engineering Student
+⭐ If you found this project useful or interesting, consider giving it a star!
